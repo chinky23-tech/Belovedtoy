@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beloved Toy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1>🎀 Barbie Dress-Up 🎀</h1>
+
+  <!-- Music -->
+  <audio id="bg-music" src="file/bensound-sunny.mp3" loop></audio>
+  <button onclick="toggleMusic()">🎵 Play Music</button>
+
+  <div class="barbie-container">
+    <img id="barbie" src="images/doll-2023718_640.jpg" alt="Barbie">
+    <div id="speech" class="speech-bubble">Hi! Let’s dress up!</div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="changeOutfit('pink')">Pink Dress</button>
+    <button onclick="changeOutfit('blue')">Blue Dress</button>
+    <button onclick="changeOutfit('gold')">Gold Dress</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
