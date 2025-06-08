@@ -15,12 +15,13 @@
     }
 
  .barbie-container{
-  max-width: 1200px;
+  position: relative;
   margin: 0 auto;
+  
  }
 
     #barbie {
-      width: 200px;
+      width: 400px;
       height: 300px;
       animation: wave 3s infinite;
       cursor: pointer;
