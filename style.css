@@ -1,4 +1,9 @@
-   body {
+  :root{
+     --pink : #f772c6;
+  }
+  
+  
+  body {
       text-align: center;
       
       background-size: cover;
@@ -8,8 +13,8 @@
     }
 
     h1 {
-      background: rgba(255, 182, 193, 0.8);
-      
+     
+      background: var(--pink);
       padding: 10px 20px;
       border-radius: 15px;
     }
@@ -19,7 +24,7 @@
   margin: 0 auto;
   
  }
-
+/*
     #barbie {
       width: 400px;
       height: 300px;
@@ -66,4 +71,4 @@
 
     button:hover {
       background-color: #ff69b4;
-    }
+    }*/
