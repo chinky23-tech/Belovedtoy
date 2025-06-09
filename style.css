@@ -1,7 +1,36 @@
   :root{
      --pink : #f772c6;
+     --white: #ffffff;
+
   }
-  
+  nav{
+    background: red;
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      margin: 0 auto;
+
+  }
+  .nav-link {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    gap: 20px;
+
+  }
+
+.nav-link a{
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+  .logo img{
+    height: 50px;
+    width: 50px;
+  }
   
   body {
       text-align: center;
@@ -13,7 +42,8 @@
     }
 
     h1 {
-     
+     width: 50%;
+     margin: 0 auto;
       background: var(--pink);
       padding: 10px 20px;
       border-radius: 15px;
@@ -24,10 +54,9 @@
   margin: 0 auto;
   
  }
-/*
+
     #barbie {
-      width: 400px;
-      height: 300px;
+     margin: 20px;
       animation: wave 3s infinite;
       cursor: pointer;
     }
@@ -39,7 +68,7 @@
       75% { transform: rotate(3deg); }
       100% { transform: rotate(0deg); }
     }
-
+/*
     .speech-bubble {
       position: absolute;
       top: -60px;
