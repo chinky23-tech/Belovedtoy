@@ -1,4 +1,4 @@
-const barbie = document.getElementById('barbie');
+/*const barbie = document.getElementById('barbie');
     const speech = document.getElementById('speech');
     const music = document.getElementById('bg-music');
     let musicPlaying = false;
@@ -26,4 +26,14 @@ const barbie = document.getElementById('barbie');
         music.pause();
         musicPlaying = false;
       }
-    }
+    }*/
+//hamburger 
+
+document.addEventListener('DOMContentLoaded',function (){
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click" , function(){
+navLinks.classList.toggle("active");
+});
+});
