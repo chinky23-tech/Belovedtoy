@@ -5,9 +5,11 @@
 }
   :root{
     --pink : #D16BA5;
-    --purple: #86A8E7;
+    --pinktwo:#FFA1DC;
+    --purple: #e0cffe;
     --sea:#5FFBF1;
     --nav: #F7EAEA;
+    --white: #ffffff;
   }
   body{
     font-family: cursive;
@@ -17,8 +19,9 @@
   display: flex;
   justify-content: space-between;
    align-items: center;
-background: rgb(214, 78, 183);
+background: var(--pinktwo);
 padding: 10px 20px;
+position: relative;
 
  }
  .logo{
@@ -28,47 +31,100 @@ padding: 10px 20px;
 .logo-toy img{
   height: 50px;
 }
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .nav-link{
   display: flex;
   gap : 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
 }
-.nav-link li{
-  list-style: none;
- 
-}
-.nav-link a{
+.nav-link li a{
+  
   text-decoration: none;
-  color: white;
+  color: var(--white);
   font-weight: bold;
 }
 
 
 
+
   
 
    .hamburger{
-    width: 30px;
-    height: 20px;
+ width: 30px;
+ height: 20px;
     display: none;
-    justify-content: space-between;
+    
     flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
    }
   .hamburger span{
     
     height: 4px;
-    background: pink;
+    background: var(--white);
     border-radius: 2px;
     transition: 0.3s ease;
   }
-  
-  
+.hamburger.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px,5px);
+}
+  .hamburger.active span:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
   @media  (max-width: 768px) {
    .nav-link{
     display: none;
+    position: absolute;
+    top: 100%;
+    right:0;
+    width: 100%;
+    background: var(--pinktwo);
+    
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    
+    z-index: 10;
    }
    .hamburger{
     display: flex;
    }
+   .nav-link.active {
+    display: flex;
+    
+ }
+
   }
+
+
+.hero{
+  
+  display : flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0 auto;
+}
+.hero-content{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to left, var(--pinktwo),var(--white),var(--pinktwo));
+}
+.hero-image  img{
+  height: 600px;
+  max-width: 100%;
+  object-fit: contain;
+padding: 10px 0 0 0;
+}
