@@ -4,12 +4,10 @@
   box-sizing: border-box;
 }
   :root{
-    --pink : #D16BA5;
-    --pinktwo:#FFA1DC;
-    --purple: #e0cffe;
-    --sea:#5FFBF1;
-    --nav: #F7EAEA;
-    --white: #ffffff;
+    --main-color: #ff4da6;
+    --secondry-color: #f7a3cd;
+    --card-color: #ff80bf;
+     --white: #ffffff;
   }
   body{
     font-family: cursive;
@@ -19,9 +17,10 @@
   display: flex;
   justify-content: space-between;
    align-items: center;
-background: var(--pinktwo);
+background:  var(--main-color);
 padding: 10px 20px;
 position: relative;
+
 
  }
  .logo{
@@ -88,7 +87,7 @@ position: relative;
     top: 100%;
     right:0;
     width: 100%;
-    background: var(--pinktwo);
+    background: var(--main-color);
     
     flex-direction: column;
     align-items: flex-start;
@@ -107,24 +106,74 @@ position: relative;
   }
 
 
-.hero{
-  
-  display : flex;
-  align-items: center;
+.hero {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  
-  margin: 0 auto;
+  align-items: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg , var(--main-color),var(--white));
+
+  color: var(--white);
+  text-align: center;
+  gap: 40px;
 }
-.hero-content{
-  width: 100%;
-  height: auto;
+.hero-content h1{
+  font-size: 2rem;
+}
+.hero-content p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.hero-image img {
+  height: 400px;
+  max-width: 100%;
+  
+  border-radius: 10px;
+}
+
+
+.memories{
+  color: var(--white);
+  padding: 20px 50px;
+  text-align: center;
+  background-image: linear-gradient(var(--main-color), var(--white), var(--secondry-color));
+}
+.memories h2{
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+.memory-cards{
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to left, var(--pinktwo),var(--white),var(--pinktwo));
+  align-items: center;
+  gap : 20px;
 }
-.hero-image  img{
-  height: 600px;
-  max-width: 100%;
-  object-fit: contain;
-padding: 10px 0 0 0;
+.memory-card{
+  background-color: var(--card-color);
+		
+
+
+  padding: 2rem;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0px 5px 15px  var(--white);
+  transition: transform 03s , box-shadow 0.3s;
+}
+.memory-card:hover{
+  transform : translateY(-10px);
+  box-shadow:          0 -1px 8px -2px  var(--white),     
+    0 4px 8px -1px var(--card-color);
+    
+}
+.memory-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.memory-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
